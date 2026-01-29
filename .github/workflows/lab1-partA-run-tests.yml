@@ -1,0 +1,57 @@
+#=========================================================================
+# lab1-partA-run-tests.yml
+#=========================================================================
+
+name: Lab 1, Part A
+
+on: [push]
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install verilator
+        run: |
+          wget --progress=dot:giga https://github.com/cornell-ece2300/github-actions-prebuild/raw/main/github-actions-verilator-5.026.tar.gz
+          tar -C ${HOME} -xzf github-actions-verilator-5.026.tar.gz
+          echo "${HOME}/verilator/bin" >> $GITHUB_PATH
+          echo "PKG_CONFIG_PATH=${HOME}/verilator/share/pkgconfig:${PKG_CONFIG_PATH}" >> $GITHUB_ENV
+
+      - name: Check verilator
+        run: |
+          which verilator
+          verilator --version
+          pkg-config --modversion verilator
+          pkg-config --cflags verilator
+
+      - name: Install iverilog
+        run: |
+          wget --progress=dot:giga https://github.com/cornell-ece2300/github-actions-prebuild/raw/main/github-actions-iverilog-12.0.tar.gz
+          tar -C ${HOME} -xzf github-actions-iverilog-12.0.tar.gz
+          echo "${HOME}/iverilog/bin" >> $GITHUB_PATH
+
+      - name: Check iverilog
+        run: |
+          which iverilog
+          iverilog -V
+
+      - name: Run sim tests
+        timeout-minutes: 10
+        run: |
+
+          verilator -Wall --lint-only -Wno-MULTITOP lab1/BinaryToSevenSegUnopt_GL.v
+          iverilog -Wall -g2012 -o BinaryToSevenSegUnopt_GL-test lab1/test/BinaryToSevenSegUnopt_GL-test.v
+          ./BinaryToSevenSegUnopt_GL-test | tee BinaryToSevenSegUnopt_GL-test.log
+
+          verilator -Wall --lint-only -Wno-MULTITOP lab1/BinaryToBinCodedDec_GL.v
+          iverilog -Wall -g2012 -o BinaryToBinCodedDec_GL-test lab1/test/BinaryToBinCodedDec_GL-test.v
+          ./BinaryToBinCodedDec_GL-test | tee BinaryToBinCodedDec_GL-test.log
+
+          verilator -Wall --lint-only -Wno-MULTITOP lab1/DisplayUnopt_GL.v
+          iverilog -Wall -g2012 -o DisplayUnopt_GL-test lab1/test/DisplayUnopt_GL-test.v
+          ./DisplayUnopt_GL-test | tee DisplayUnopt_GL-test.log
+
+          ! grep -q "FAILED" *-test.log && ! grep -q ERROR *-test.log
