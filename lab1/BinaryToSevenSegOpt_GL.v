@@ -12,12 +12,8 @@ module BinaryToSevenSegOpt_GL
   input  wire [3:0] in,
   output wire [6:0] seg
 );
-
-  //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Implement the optimized binary to seven segment converter
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-  // remove these lines before starting your implementation
+// meow
+  
   `ECE2300_UNUSED( in );
   `ECE2300_UNDRIVEN( seg );
 

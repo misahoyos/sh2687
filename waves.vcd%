@@ -1,0 +1,256 @@
+$date
+	Mon Feb  2 16:04:11 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestUtilsClkRst $end
+$var parameter 32 ! outputs_undefined $end
+$var reg 1 " clk $end
+$var reg 1 # failed $end
+$var reg 1 $ passed $end
+$var reg 1 % rst $end
+$var integer 32 & cycles [31:0] $end
+$var integer 32 ' n [31:0] $end
+$var integer 32 ( num_checks [31:0] $end
+$var integer 32 ) num_test_cases_failed [31:0] $end
+$var integer 32 * num_test_cases_passed [31:0] $end
+$var integer 32 + seed [31:0] $end
+$scope task test_bench_begin $end
+$upscope $end
+$scope task test_bench_end $end
+$upscope $end
+$scope task test_case_begin $end
+$upscope $end
+$scope task test_case_end $end
+$upscope $end
+$upscope $end
+$scope module Top $end
+$var wire 7 , seg [6:0] $end
+$var reg 4 - in [3:0] $end
+$scope module dut $end
+$var wire 1 . d0 $end
+$var wire 1 / d1 $end
+$var wire 1 0 d2 $end
+$var wire 1 1 d3 $end
+$var wire 1 2 d4 $end
+$var wire 1 3 d5 $end
+$var wire 1 4 d6 $end
+$var wire 1 5 d7 $end
+$var wire 1 6 d9 $end
+$var wire 4 7 in [3:0] $end
+$var wire 1 8 n0 $end
+$var wire 1 9 n1 $end
+$var wire 1 : n2 $end
+$var wire 1 ; n3 $end
+$var wire 7 < seg [6:0] $end
+$upscope $end
+$scope module t $end
+$var parameter 32 = outputs_undefined $end
+$var reg 1 > clk $end
+$var reg 1 ? failed $end
+$var reg 1 @ passed $end
+$var reg 1 A rst $end
+$var integer 32 B cycles [31:0] $end
+$var integer 32 C n [31:0] $end
+$var integer 32 D num_checks [31:0] $end
+$var integer 32 E num_test_cases_failed [31:0] $end
+$var integer 32 F num_test_cases_passed [31:0] $end
+$var integer 32 G seed [31:0] $end
+$scope task test_bench_begin $end
+$upscope $end
+$scope task test_bench_end $end
+$upscope $end
+$scope task test_case_begin $end
+$upscope $end
+$scope task test_case_end $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$var reg 4 H in_ [3:0] $end
+$var reg 7 I seg_ [6:0] $end
+$upscope $end
+$scope task test_case_1_basic $end
+$upscope $end
+$scope task test_case_2_exhaustive $end
+$upscope $end
+$scope task test_case_3_xprop $end
+$upscope $end
+$upscope $end
+$scope module TestUtilsClkRst $end
+$scope task test_bench_begin $end
+$upscope $end
+$scope task test_bench_end $end
+$upscope $end
+$scope task test_case_begin $end
+$upscope $end
+$scope task test_case_end $end
+$upscope $end
+$upscope $end
+$scope module Top $end
+$scope module dut $end
+$upscope $end
+$scope module t $end
+$scope task test_bench_begin $end
+$upscope $end
+$scope task test_bench_end $end
+$upscope $end
+$scope task test_case_begin $end
+$upscope $end
+$scope task test_case_end $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$upscope $end
+$scope task test_case_1_basic $end
+$upscope $end
+$scope task test_case_2_exhaustive $end
+$upscope $end
+$scope task test_case_3_xprop $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 =
+b1 !
+$end
+#0
+$dumpvars
+bx I
+bx H
+b11011110101011011011111011101111 G
+b0 F
+b0 E
+b0 D
+b10 C
+b0 B
+1A
+0@
+0?
+1>
+bx <
+x;
+x:
+x9
+x8
+bx 7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+bx -
+bx ,
+b11011110101011011011111011101111 +
+b0 *
+b0 )
+b0 (
+b10 '
+b0 &
+x%
+0$
+0#
+1"
+$end
+#5
+0>
+0"
+#10
+b1 &
+1>
+1"
+#15
+0>
+0"
+#20
+b10 &
+1>
+1"
+#25
+0>
+0"
+#30
+b1 B
+b11 &
+1.
+b1000000 ,
+b1000000 <
+1;
+1:
+19
+18
+0/
+00
+01
+02
+03
+04
+05
+06
+1>
+1"
+b0 -
+b0 7
+b1 D
+b1000000 I
+b0 H
+0A
+#35
+0>
+0"
+#38
+1@
+#40
+b10 B
+b100 &
+0.
+b1111001 ,
+b1111001 <
+08
+1/
+b1 -
+b1 7
+b10 D
+b1111001 I
+b1 H
+1>
+1"
+#45
+0>
+0"
+#50
+b11 B
+b101 &
+b0 ,
+b0 <
+09
+18
+0/
+b10 -
+b10 7
+b11 D
+b100100 I
+b10 H
+1>
+1"
+#55
+0>
+0"
+#58
+1?
+#60
+b100 B
+b110 &
+b1 E
+b0 I
+b1111 H
+1>
+1"

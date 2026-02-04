@@ -51,9 +51,23 @@ endtask
 task test_case_2_exhaustive();
   t.test_case_begin( "test_case_2_exhaustive" );
 
-  //''' LAB ASSIGNMENT '''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Add checks for exhaustive testing (check all possible inputs)
-  //''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  check( 4'b0000, 7'b100_0000 ); 
+  check( 4'b0001, 7'b111_1001 ); 
+  check( 4'b0010, 7'b010_0100 ); 
+  check( 4'b0011, 7'b011_0000 ); 
+  check( 4'b0100, 7'b001_1001 ); 
+  check( 4'b0101, 7'b001_0010 ); 
+  check( 4'b0110, 7'b000_0010 ); 
+  check( 4'b0111, 7'b111_1000 ); 
+  check( 4'b1000, 7'b000_0000 ); 
+  check( 4'b1001, 7'b001_0000 ); 
+
+  check( 4'b1010, 7'b000_0000 ); 
+  check( 4'b1011, 7'b000_0000 ); 
+  check( 4'b1100, 7'b000_0000 ); 
+  check( 4'b1101, 7'b000_0000 ); 
+  check( 4'b1110, 7'b000_0000 ); 
+  check( 4'b1111, 7'b000_0000 ); 
 
   t.test_case_end();
 endtask
