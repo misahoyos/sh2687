@@ -26,7 +26,7 @@ not ( n2, in[2] );
 not ( n3, in[3] );
 not ( n4, in[4] );
 
-wire d0;
+// wire d0;
 wire d1;
 wire d2;
 wire d3;
@@ -54,14 +54,14 @@ wire d22;
 wire d23;
 wire d24;
 wire d25;
-wire d26;g
+wire d26;
 wire d27;
 wire d28;
 wire d29;
 wire d30;
 wire d31;
 
-and(d0, n4, n3, n2, n1, n0);
+// and(d0, n4, n3, n2, n1, n0);
 and(d1, n4, n3, n2, n1, in[0]);
 and(d2, n4, n3, n2, in[1], n0);
 and(d3, n4, n3, n2, in[1], in[0]);
@@ -116,4 +116,5 @@ assign tens[2] = 1'b0;
 assign tens[3] = 1'b0;
 
 endmodule
- `endif /* BINARY_TO_BIN_CODED_DEC_GL_V */
+ `endif
+ /* BINARY_TO_BIN_CODED_DEC_GL_V */ 
