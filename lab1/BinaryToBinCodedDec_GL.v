@@ -56,7 +56,6 @@ wire d24;
 wire d25;
 wire d26;
 wire d27;
-wire d20;
 wire d28;
 wire d29;
 wire d30;
