@@ -87,7 +87,7 @@ module Top();
     t.test_case_begin( "test_case_2_exhaustive" );
    check( 5'b00000, 4'b0000, 4'b0000 ); // 0
    check( 5'b00001, 4'b0000, 4'b0001 ); // 1
-   heck( 5'b00010, 4'b0000, 4'b0010 ); // 2
+   check( 5'b00010, 4'b0000, 4'b0010 ); // 2
    check( 5'b00011, 4'b0000, 4'b0011 ); // 3
    check( 5'b00100, 4'b0000, 4'b0100 ); // 4
    check( 5'b00101, 4'b0000, 4'b0101 ); // 5
