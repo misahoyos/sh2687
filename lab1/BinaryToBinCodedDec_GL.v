@@ -3,14 +3,8 @@
 //========================================================================
 
 
-
 `ifndef BINARY_TO_BIN_CODED_DEC_GL_V
 `define BINARY_TO_BIN_CODED_DEC_GL_V
-
-
-//========================================================================
-// BinaryToBinCodedDec_GL
-//========================================================================
 
 module BinaryToBinCodedDec_GL
 (
@@ -18,7 +12,6 @@ module BinaryToBinCodedDec_GL
   output wire [3:0] tens,
   output wire [3:0] ones
 );
-
 
 // wires 
 wire n4 = in[4];
@@ -76,7 +69,7 @@ and( d13, not4, n3,  n2,  not1, n0 );
 and( d14, not4, n3,  n2,  n1,  not0 );
 and( d15, not4, n3,  n2,  n1,  n0 );
 
-and( d16, n4,  not3, not2, not1, n0 );
+and( d16, n4,  not3, not2, not1, not0 );
 and( d17, n4,  not3, not2, not1, n0 );
 and( d18, n4,  not3, not2, n1,  not0 );
 and( d19, n4,  not3, not2, n1,  n0 );
@@ -101,14 +94,14 @@ or ( t0, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d30, d31 );
 or ( t1, d20, d21, d22, d23, d24, d25, d26, d27, d28, d29, d30, d31 );
 
 // ones
-or ( o0, d1,  d3,  d5,  d7,  d9,  d11, d13, d15, d17, d19, d21, d23, d25, d27, d29, d31 );
-or ( o1, d2,  d3,  d6,  d7,  d12, d13, d16, d17, d22, d23, d26, d27 );
-or ( o2, d4,  d5,  d6,  d7,  d14, d15, d16, d17, d24, d25, d26, d27 );
-or ( o3, d8,  d9,  d18, d19, d28, d29 );
+or ( o0, d1, d3, d5, d7, d9, d11, d13, d15, d17, d19, d21, d23, d25, d27, d29, d31 );
+or ( o1, d2, d3, d6, d7, d12, d13, d16, d17, d22, d23, d26, d27 );
+or ( o2, d4, d5, d6, d7, d14, d15, d16, d17, d24, d25, d26, d27 );
+or ( o3, d8, d9, d18, d19, d28, d29 );
 
 assign tens[3:2] = 2'b00;
-assign tens[1]   = t1;
-assign tens[0]   = t0;
+assign tens[1] = t1;
+assign tens[0] = t0;
 
 assign ones[3] = o3;
 assign ones[2] = o2;
@@ -116,5 +109,5 @@ assign ones[1] = o1;
 assign ones[0] = o0;
 
 endmodule
-`endif
+`endif 
 /* BINARY_TO_BIN_CODED_DEC_GL_V */
