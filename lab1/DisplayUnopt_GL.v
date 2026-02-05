@@ -35,7 +35,7 @@ BinaryToSevenSegUnopt_GL tens_display
 BinaryToSevenSegUnopt_GL ones_display
 (
   .in  ( ones     ),
-  .seg ( seg_ones )
+  .seg (seg_ones )
 );
 
 endmodule
