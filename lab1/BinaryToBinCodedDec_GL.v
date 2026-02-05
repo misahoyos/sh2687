@@ -2,7 +2,6 @@
 // BinaryToBinCodedDec_GL
 //========================================================================
 
-
 `ifndef BINARY_TO_BIN_CODED_DEC_GL_V
 `define BINARY_TO_BIN_CODED_DEC_GL_V
 
