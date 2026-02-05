@@ -36,7 +36,7 @@ wire d9;
 and ( d0, n3, n2, n1, n0 );        
 and ( d1, n3, n2, n1, in[0] );    
 and ( d2, n3, n2, in[1], n0 );    
-and ( d3, n3, n2, in[1], in[0] ); 
+and ( d3, n3, n2, in[1], in[0]); 
 and ( d4, n3, in[2], n1, n0 );    
 and ( d5, n3, in[2], n1, in[0] ); 
 and ( d6, n3, in[2], in[1], n0 ); 
