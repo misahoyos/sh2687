@@ -58,5 +58,6 @@ or (seg[5], d1, d2, d3, d7);
 or (seg[6], d0, d1, d7);
 
 endmodule
-`endif 
-/* BINARY_TO_SEVEN_SEG_UNOPT_GL_V */
+ `endif 
+ /* BINARY_TO_SEVEN_SEG_UNOPT_GL_V */
+ 
